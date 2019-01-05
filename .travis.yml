@@ -13,7 +13,6 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 before_script:
-  - 'sed -i "/users/a \ \ privileged: true" docker-compose-dev.yml'
   - docker-compose -f docker-compose-dev.yml up --build -d
 
 script:
