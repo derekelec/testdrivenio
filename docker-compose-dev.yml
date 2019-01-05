@@ -6,6 +6,7 @@ services:
     build:
       context: ./services/users
       dockerfile: Dockerfile-dev
+    privileged: true
     volumes:
       - './services/users:/usr/src/app'
     ports:
@@ -22,6 +23,7 @@ services:
     build:
       context: ./services/users/project/db
       dockerfile: Dockerfile
+    privileged: true
     ports:
       - 5435:5432
     environment:
